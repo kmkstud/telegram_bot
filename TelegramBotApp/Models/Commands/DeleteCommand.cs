@@ -18,7 +18,7 @@ namespace TelegramBotApp.Models.Commands
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
 
-            if (delete(message.Text))
+            if (delete(message.Text, chatId))
             {
                 client.SendTextMessageAsync(chatId, "Your registration has been deleted", replyToMessageId: messageId);
             }
@@ -28,11 +28,11 @@ namespace TelegramBotApp.Models.Commands
             }
         }
 
-        public bool delete(string answer)
+        public bool delete(string answer, long chatId)
         {
             using (PersonContext db = new PersonContext())
             {
-                var cause = db.Persons.FirstOrDefault(m => m.Name == "Madina");
+                var cause = db.Persons.FirstOrDefault(m => m.TelegramId == chatId);
                 if (cause == null)
                 {
                     return false;

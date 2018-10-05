@@ -223,6 +223,14 @@
     <Compile Include="Migrations\201810041639528_add DateTime.Designer.cs">
       <DependentUpon>201810041639528_add DateTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201810050828577_add chatId.cs" />
+    <Compile Include="Migrations\201810050828577_add chatId.Designer.cs">
+      <DependentUpon>201810050828577_add chatId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201810050836453_add telId.cs" />
+    <Compile Include="Migrations\201810050836453_add telId.Designer.cs">
+      <DependentUpon>201810050836453_add telId.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppSettings.cs" />
     <Compile Include="Models\Bot.cs" />
@@ -293,6 +301,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201810041639528_add DateTime.resx">
       <DependentUpon>201810041639528_add DateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810050828577_add chatId.resx">
+      <DependentUpon>201810050828577_add chatId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201810050836453_add telId.resx">
+      <DependentUpon>201810050836453_add telId.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -22,7 +22,7 @@ namespace TelegramBotApp.Models.Commands
             
             try
             {
-                register(message.Text);
+                register(message.Text, chatId);
                 client.SendTextMessageAsync(chatId, "You are registered", replyToMessageId: messageId);
             }
 
@@ -32,7 +32,7 @@ namespace TelegramBotApp.Models.Commands
             }
         }
         
-        public void register( string answer)
+        public void register( string answer,long chatId)
         {
             Person person = new Person();
 
@@ -42,6 +42,7 @@ namespace TelegramBotApp.Models.Commands
             person.Name = words[1];
             person.Secondname = words[2];
             person.DateOfBirth = DateTime.Parse(words[3]);
+            person.TelegramId = chatId;
 
             using (PersonContext db = new PersonContext())
             {

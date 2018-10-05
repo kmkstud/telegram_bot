@@ -18,19 +18,9 @@ namespace TelegramBotApp.Controllers
             var message  = update.Message;
             var client   = await Bot.Get();
             var l = Bot.lastCommand;
-            var telegramId = update.Message.Chat.Id; 
+            long telegramId = update.Message.Chat.Id; 
 
-
-            //foreach (var command in commands)
-            //{
-            //    if (command.Contains(message.Text))
-            //    {
-            //        command.Execute(message, client);
-            //        break;
-            //    }
-            //    else registration.register(db, message.Text);
-            //}
-
+           
             var command = commands.FirstOrDefault(x => x.Contains(message.Text));
             if (command != null)
             {

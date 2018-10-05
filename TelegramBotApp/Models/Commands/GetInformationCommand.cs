@@ -14,7 +14,7 @@ namespace TelegramBotApp.Models.Commands
             var chatId = message.Chat.Id;
             var messageId = message.MessageId;
 
-            var currentPerson = get(message.Text);
+            var currentPerson = get(chatId);
 
             if (currentPerson != null)
             {
@@ -27,12 +27,12 @@ namespace TelegramBotApp.Models.Commands
 
         }
 
-        public Person get(string answer)
+        public Person get(long chatId)
         {
             using (PersonContext db = new PersonContext())
             {
-                var persons = db.Persons.FirstOrDefault(p => p.Name == "Madina");
-                return persons;
+                var person = db.Persons.FirstOrDefault(p => p.TelegramId == chatId);
+                return person;
             }
         }
     }
