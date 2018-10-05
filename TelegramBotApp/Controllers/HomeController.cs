@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TelegramBotApp.Models.EF;
 
 namespace TelegramBotApp.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        
+        public string Index()
         {
-            ViewBag.Title = "Home Page";
-
-            return View();
+            
+            return "ok";
         }
     }
 }
