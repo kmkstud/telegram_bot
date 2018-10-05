@@ -18,6 +18,7 @@ namespace TelegramBotApp.Controllers
             var message  = update.Message;
             var client   = await Bot.Get();
             var l = Bot.lastCommand;
+            var telegramId = update.Message.Chat.Id; 
 
 
             //foreach (var command in commands)
