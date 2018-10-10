@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\TelegramBotApp",
+    "\\TelegramBotApp\\App_Data",
+    "\\TelegramBotApp\\App_Start"
+  ],
+  "SelectedNode": "\\TelegramBotApp\\App_Start\\RouteConfig.cs",
+  "PreviewInSolutionExplorer": false
+}
